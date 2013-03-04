@@ -9,7 +9,6 @@ class Heroku::Command::App < Heroku::Command::Run
   # 
   # Feels good, doesn't it.
   def index
-    validate_arguments!
     Heroku::Command::Help.new.send(:help_for_command, current_command)
 
     unless @args.size > 0
