@@ -9,8 +9,6 @@ class Heroku::Command::App < Heroku::Command::Run
   # 
   # Feels good, doesn't it.
   def index
-    Heroku::Command::Help.new.send(:help_for_command, current_command)
-
     unless @args.size > 0
         raise(CommandFailed, "Need to specify heroku app to use.")
     end
